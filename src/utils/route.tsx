@@ -2,6 +2,8 @@ import App from "@/App";
 import AdminSidebar from "@/components/layout/AdminSidebar";
 import AdminLayout from "@/layout/AdminLayout";
 import UserLayout from "@/layout/UserLayout";
+import PublicPackage from "@/pages/admin/PublicPackage";
+import UserAdmin from "@/pages/admin/UserAdmin";
 import HomaPage from "@/pages/HomePage";
 import  Login  from "@/pages/Login";
 import SignUpPage from "@/pages/SignUp";
@@ -67,8 +69,12 @@ const router = createBrowserRouter([
                 element : <Dashboard />
             },
             {
-                path: ":user_id/files"  ,
-                element : <AllFiles />
+                path: "users",
+                element : <UserAdmin/>
+            },
+            {
+                path: "packages"  ,
+                element : <PublicPackage />
             },
             {
                 path: ":user_id/folder",

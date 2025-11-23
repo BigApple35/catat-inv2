@@ -95,7 +95,7 @@ export default function FolderButton({
 
           <PopoverContent className="w-32 p-1">
             <button
-              onClick={() => setOpen(true)}
+              onClick={(e) => {e.stopPropagation();setOpen(true)}}
               className="flex w-full items-center gap-2 px-2 py-1.5 hover:bg-accent rounded-md"
             >
               <Pencil className="w-4 h-4" />

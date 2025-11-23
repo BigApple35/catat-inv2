@@ -52,7 +52,7 @@ const [youtubeTitle, setYoutubeTitle] = useState("");
     }
   async function handleDrop(file: File) {
     console.log("Dropped file:", file);
-
+    toast ("Uploading file this might take a while");
     await uploadFileToFolder(folder_id, file);
     toast ("File uploaded");
     load()
