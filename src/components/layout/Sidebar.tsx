@@ -32,7 +32,7 @@ export function AppSidebar({ variant = "inset" }: { variant?: string }) {
     >
       <SidebarContent>
         <SidebarHeader className="px-3 py-4">
-          <div className="text-lg font-semibold">Catatin</div>
+          <div className="text-lg font-semibold">Rangkumin.ai</div>
         </SidebarHeader>
 
         <nav aria-label="Main navigation" className="px-2">

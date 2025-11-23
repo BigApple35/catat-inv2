@@ -1,4 +1,6 @@
+import { LearningTimeChart } from "@/components/LineChart";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import PPTIcon from "../../assets/PDFIcon.svg"
 
 const tasks = [
     {
@@ -121,21 +123,23 @@ function  Dashboard() {
                             tasks.map((task, index) => (
                                 <div key={index} className="flex justify-between mb-2 flex-col border-b-2 text-sm font-semibold">
                                     <span>{task.title}</span>
-                                    <span className="text-xs">{task.due_date}</span>
+                                    <span className="text-xs font-light">{task.due_date}</span>
                                 </div>
                             ))
                         }
                     </CardContent>
                 </Card>
                 <Card className="col-span-2">
-                    <CardHeader>
-                        <CardTitle className="flex justify-between"><span>Your learning time</span></CardTitle>
-                        <CardDescription>Your due important tasks</CardDescription>
-                    </CardHeader>
-                    <CardContent className="max-h-60 overflow-y-auto overflow-x-clip">
-                        
-                    </CardContent>
-                </Card>
+    <CardHeader>
+        <CardTitle className="flex justify-between">
+            <span>Your learning time</span>
+        </CardTitle>
+        <CardDescription>Your weekly learning analytics</CardDescription>
+    </CardHeader>
+    <CardContent className="max-h-60 overflow-y-auto overflow-x-clip">
+        <LearningTimeChart />
+    </CardContent>
+</Card>
             </div>
             <div className="grid grid-cols-1">
                 <Card className="col-span-1">
@@ -145,8 +149,11 @@ function  Dashboard() {
                     <CardContent className="max-h-60 overflow-y-auto overflow-x-clip">
                         {
                             recentlyOpened.map((item, index) => (
-                                <div key={index} className="flex justify-between mb-2 flex-col border-b-2 text-sm font-semibold">
-                                    <span>{item.title}</span>
+                                <div key={index} className="flex justify-between mb-2 py-5 flex-col border-b-2 text-sm font-semibold">
+                                    <div className="flex items-center gap-5">
+                                        <span><img src={PPTIcon} className="w-8 h-8 "alt="" /></span>
+                                        <span>{item.title}</span>
+                                    </div>
                                 </div>
                             ))
                         }

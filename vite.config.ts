@@ -12,6 +12,13 @@ export default defineConfig({
     },
   },
   server: {
+    proxy: {
+      '/api': {
+        target: 'https://focus-room-be-production.up.railway.app',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
     fs: { strict: false },
   },
 })

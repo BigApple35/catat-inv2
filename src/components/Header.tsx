@@ -16,7 +16,7 @@ const Header = () => {
             <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
               <Lightbulb className="w-5 h-5 text-background" />
             </div>
-            <span className="text-xl font-bold text-foreground">AI Learn</span>
+            <span className="text-xl font-bold text-foreground">rangkumin.ai</span>
           </div>
 
           {/* Desktop Navigation */}
