@@ -31,7 +31,7 @@ export type SignUpPayload = {
 
 export async function signup(payload: SignUpPayload) {
   try {
-    const response = await api.post("/auth/signup", payload);
+    const response = await api.post("/auth/register", payload);
     const token = response.data.token;
     localStorage.setItem("token", token);
     return response.data;

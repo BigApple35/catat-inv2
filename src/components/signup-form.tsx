@@ -39,7 +39,7 @@ export default function SignupForm({
               <form onSubmit={handleSubmit(onSubmit)}>
                 <FieldGroup>
                   <Field>
-                    <FieldLabel htmlFor="username">Email</FieldLabel>
+                    <FieldLabel htmlFor="username">Username</FieldLabel>
                     <Input
                       id="username"
                       type="username"
@@ -65,7 +65,7 @@ export default function SignupForm({
                   </Field>
                   <Field>
                     <FieldLabel htmlFor="confirm_password">Confirm Password</FieldLabel>
-                    <Input id="confirm_password" type="confirm_password" {...register("password_confirm")} required />
+                    <Input id="confirm_password" type="password" {...register("password_confirm")} required />
                   </Field>
                   <Field>
                     <Button type="submit">Register</Button>
