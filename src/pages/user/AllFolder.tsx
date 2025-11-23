@@ -12,9 +12,18 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogTitle, DialogTrigger } from "@radix-ui/react-dialog";
-import { Plus, Search } from "lucide-react";
+import { ArrowRightIcon, Plus, Search } from "lucide-react";
 import { toast } from "sonner";
 import { uploadFileToFolder } from "@/api/material-upload";
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@/components/ui/empty"
+import { IconFolderCode } from "@tabler/icons-react";
 
 function AllFolder() {
   const [folders, setFolders] = useState<any[]>([]);
@@ -53,6 +62,39 @@ function AllFolder() {
       loadFolders(); // refresh
     }
   };
+
+  if(!folders){
+    <div>
+      <Empty>
+      <EmptyHeader>
+        <EmptyMedia variant="icon">
+          <IconFolderCode />
+        </EmptyMedia>
+        <EmptyTitle>No Projects Yet</EmptyTitle>
+        <EmptyDescription>
+          You haven&apos;t created any projects yet. Get started by creating
+          your first project.
+        </EmptyDescription>
+      </EmptyHeader>
+      <EmptyContent>
+        <div className="flex gap-2">
+          <Button>Create Project</Button>
+          <Button variant="outline">Import Project</Button>
+        </div>
+      </EmptyContent>
+      <Button
+        variant="link"
+        asChild
+        className="text-muted-foreground"
+        size="sm"
+      >
+        <a href="#">
+          Learn More <ArrowRightIcon />
+        </a>
+      </Button>
+    </Empty>
+    </div>
+  }
 
   return (
     <div className="h-full">
