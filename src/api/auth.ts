@@ -36,7 +36,7 @@ export async function signup(payload: SignUpPayload) {
       role : "siswa"
     }
     const response = await api.post("/auth/register", payload);
-    const token = response.data.token;
+    const token = response.data.data.token;
     localStorage.setItem("token", token);
     return response.data;
   } catch (error : any) {
