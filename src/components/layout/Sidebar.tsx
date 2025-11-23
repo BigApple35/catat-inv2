@@ -6,7 +6,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { Home, FileText, CheckSquare, Users } from "lucide-react";
+import { Home, FileText, CheckSquare, Users, Flame } from "lucide-react";
 import { NavLink } from "react-router";
 
 /**
@@ -20,7 +20,7 @@ export function AppSidebar({ variant = "inset" }: { variant?: string }) {
     { to: "/dashboard", label: "Dashboard", icon: Home },
     { to: "/me/folder", label: "Files", icon: FileText },
     { to: "/me/todo", label: "Todo", icon: CheckSquare },
-    { to: "/me/friends", label: "Friends", icon: Users },
+    { to: "/daily-quiz", label: "Daily Quiz", icon: Flame },
   ];
 
   return (

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
+import { Flame } from "lucide-react"
 
 export function SiteHeader() {
   return (
@@ -13,15 +13,7 @@ export function SiteHeader() {
         />
         <h1 className=" font-medium">Dashboard</h1>
         <div className="ml-auto flex items-center gap-2">
-          <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
-            <a
-              href="/login"
-              rel="noopener noreferrer"
-              className="dark:text-foreground"
-            >
-              Login
-            </a>
-          </Button>
+          <Flame/> {localStorage.getItem("streak")}
         </div>
       </div>
     </header>

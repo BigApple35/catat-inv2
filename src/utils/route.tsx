@@ -1,6 +1,8 @@
+import App from "@/App";
 import AdminSidebar from "@/components/layout/AdminSidebar";
 import AdminLayout from "@/layout/AdminLayout";
 import UserLayout from "@/layout/UserLayout";
+import HomaPage from "@/pages/HomePage";
 import  Login  from "@/pages/Login";
 import SignUpPage from "@/pages/SignUp";
 import AllFiles from "@/pages/user/AllFiles";
@@ -13,6 +15,10 @@ import ToDoList from "@/pages/user/ToDoList";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
+    {
+        path : "/home",
+        element: <HomaPage/>
+    },
     {
         path: "/",
         element: <UserLayout/>,

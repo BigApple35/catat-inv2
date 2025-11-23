@@ -12,6 +12,8 @@ export async function login(payload: LoginPayload) {
       const response = await api.post("/auth/login", payload);
       const token = response.data.data.token;
       localStorage.setItem("token", token);
+      const streak = await api.get("/student/daily-quiz/status")
+      localStorage.setItem("streak", streak.data.data.streak)
       return response.data;
     } catch (error : any) {
       console.log("Login error:", error.response.data.meta.message);

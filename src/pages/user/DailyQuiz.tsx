@@ -23,6 +23,8 @@ export default function DailyQuiz({onAnswer, onComplete }: Props) {
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(false)
   const [quizID, setQuizID] = useState()
+  const [isDone, setIsDone] = useState<boolean>(false)
+
     useEffect(() => {
   
       const loadFlashcards = async () => {
@@ -30,6 +32,7 @@ export default function DailyQuiz({onAnswer, onComplete }: Props) {
           setLoading(true);
           const res = await getDailyQuiz();
           setQuizID(res.id)
+          setIsDone(res.is_done)
           const mapped = res.questions.map((q: any) => ({
     id: q.id,
     pertanyaan: q.pertanyaan,
@@ -183,6 +186,9 @@ function restartQuiz() {
   }, [qs, answersMap]);
   if(loading) {
     return <p>Loading ...</p>
+  }
+  if(isDone){
+    return <p>You have done your daily quiz</p>
   }
 
   return (

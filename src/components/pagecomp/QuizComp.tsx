@@ -177,6 +177,14 @@ export function QuizComp({ materialId, onAnswer, onComplete }: Props) {
       );
     }, 0);
   }, [qs, answersMap]);
+  function restartQuiz() {
+  setCurrentIndex(0);
+  setValue("");
+  setAnswered(false);
+  setAnswersMap({});
+  setFinished(false);
+  setShowResult(false);
+}
   if(loading) {
     return <p>Loading ...</p>
   }
@@ -289,7 +297,7 @@ export function QuizComp({ materialId, onAnswer, onComplete }: Props) {
         </div>
       ) : (
         <div className="w-full h-full relative">
-          <QuizResult correct={correctCount} total={qs.length} materialId={materialId} />
+          <QuizResult correct={correctCount} total={qs.length} materialId={materialId} onRestart={restartQuiz} />
           <div
             className={`absolute inset-0 d  flex items-center transition-all duration-200 animate-fadeIn z-0  justify-center ${
               showResult ? "z-0 " : "z-20 bg-background"

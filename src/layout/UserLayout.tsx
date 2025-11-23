@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Navigate, Outlet } from "react-router";
 import { AppSidebar } from "@/components/layout/Sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
@@ -6,6 +6,10 @@ import { Toaster } from "sonner";
 
 
 function UserLayout() {
+  const token = localStorage.getItem("token")
+    if(!token){
+        return <Navigate to={"/home"}/>
+    }
   return (
     <SidebarProvider
       style={
