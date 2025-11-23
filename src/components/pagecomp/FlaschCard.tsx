@@ -30,7 +30,7 @@ export default function FlashCard({ materialId, className = "" }: FlashCardsProp
         setLoading(true);
 
         const res = await generateFlashcards(materialId);
-const mapped = res.map((fc, idx) => ({
+const mapped = res.map((fc:any, idx:any) => ({
   id: idx,
   question: fc.front,
   answer: fc.back,

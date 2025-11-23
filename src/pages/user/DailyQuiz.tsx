@@ -14,12 +14,11 @@ type Question = {
 
 type Props = {
   // accept array of questions now
-  materialId : number
   onAnswer?: (id: number, answer: string) => void;
   onComplete?: () => void; // called when all questions are done
 };
 
-export default function DailyQuiz({ materialId, onAnswer, onComplete }: Props) {
+export default function DailyQuiz({onAnswer, onComplete }: Props) {
   // default questions array
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(false)
