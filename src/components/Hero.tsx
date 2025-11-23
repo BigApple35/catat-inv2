@@ -27,8 +27,8 @@ const Hero = () => {
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Learn Smarter with{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                AI Assistance
+              <span className="bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent">
+                Rangkumin
               </span>
             </h1>
             
