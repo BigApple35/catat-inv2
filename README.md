@@ -1,3 +1,66 @@
+# 📘 Rangkumin.ai
+
+Rangkumin.ai adalah aplikasi belajar berbasis AI yang dirancang untuk membantu pengguna belajar dengan lebih efektif, ringkas, dan terstruktur. Aplikasi ini mempermudah proses memahami materi dengan menyajikan rangkuman, flash card, dan quiz, sekaligus melacak progres pembelajaran pengguna.
+
+---
+
+## ✨ Fitur Utama
+
+* **Rangkuman Otomatis**
+  Mengubah materi belajar yang panjang menjadi rangkuman singkat dan mudah dipahami.
+
+* **Flash Card Interaktif**
+  Membantu mengingat poin-poin penting melalui flash card yang dihasilkan dari materi atau rangkuman.
+
+* **Quiz Adaptif**
+  Quiz dibuat berdasarkan materi dan rangkuman untuk menguji pemahaman pengguna.
+
+* **Tracking Progres Belajar**
+  Memonitor aktivitas belajar, hasil quiz, dan perkembangan pemahaman pengguna dari waktu ke waktu.
+
+---
+
+## 🎯 Tujuan
+
+Rangkumin.ai bertujuan untuk:
+
+* Membantu pelajar belajar lebih efisien
+* Mengurangi waktu membaca materi panjang
+* Meningkatkan daya ingat dan pemahaman
+* Memberikan gambaran jelas tentang progres belajar
+
+---
+
+## 🚀 Manfaat
+
+Dengan Rangkumin.ai, pengguna dapat:
+
+* Belajar lebih fokus dan terarah
+* Mengulang materi dengan cepat
+* Mengukur kemampuan diri melalui quiz
+* Konsisten dalam proses belajar
+
+---
+
+## 🧠 Cocok Untuk
+
+* Pelajar dan mahasiswa
+* Pembelajar mandiri
+* Siapa saja yang ingin belajar lebih efektif dengan bantuan AI
+
+---
+
+## 📌 Catatan
+
+Rangkumin.ai terus dikembangkan untuk menghadirkan pengalaman belajar yang semakin personal dan optimal.
+
+---
+
+> *Belajar tidak harus lama, yang penting paham.* ✨
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
