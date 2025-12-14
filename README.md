@@ -59,7 +59,15 @@ Rangkumin.ai terus dikembangkan untuk menghadirkan pengalaman belajar yang semak
 > *Belajar tidak harus lama, yang penting paham.* ✨
 
 
+# How To Install
 
+- First download the file as zip and then extract it 
+- Second open the terminal and copy this code 
+```
+npm install
+npm run dev
+```
+- Open http://localhost:5173 and you're done 🚀🚀
 
 # React + TypeScript + Vite
 
